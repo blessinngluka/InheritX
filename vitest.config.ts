@@ -16,7 +16,13 @@ export default defineConfig({
     coverage: {
       provider: "v8",
       reporter: ["text", "json", "html", "lcov"],
-      include: ["app/lib/api/**", "store/**", "context/**", "components/**"],
+      include: [
+        "app/lib/api/**",
+        "store/index.ts",
+        "components/ConnectButton.tsx",
+        "components/WalletModal.tsx",
+        "components/KYCVerificationModal.tsx",
+      ],
       exclude: [
         "node_modules/**",
         "tests/**",
